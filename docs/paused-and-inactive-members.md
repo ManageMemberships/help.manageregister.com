@@ -25,9 +25,9 @@ A member's status is set in ManageMemberships. The register reads it when you se
 1. In the Cashier member search, a paused member's line in the results ends with a tag, for example **[MEMBERSHIP PAUSED UNTIL DEC 15, 2026]**. With no resume date, the tag is **[MEMBERSHIP PAUSED]**.
 2. After you add the member, a notice appears at the top of the cart panel, above **Order details**:
    - Heading: **MEMBERSHIP PAUSED UNTIL DEC 15, 2026** (or **MEMBERSHIP PAUSED** with no resume date).
-   - Second line: "&lt;Member name&gt; can still be sold to at guest rates — range access and class booking are paused."
+   - Second line: the member's name, followed by text saying range access and class booking are paused. The banner also says the member can still be sold to at guest rates.
 
-The line mentions guest rates, but the register does not apply a different price because of the pause.
+The mention of guest rates is wording only. The register does not change prices because of a pause, so a paused member is charged the same price that applies to them normally.
 
 The notice is for information only. It does not block the sale. **Proceed to payment** works as normal. Staff cannot clear the notice.
 
