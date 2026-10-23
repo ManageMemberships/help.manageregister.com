@@ -32,13 +32,13 @@ Who sees the reason depends on their role:
 
 | Tier | What they see | Default roles |
 |------|---------------|---------------|
-| **Visible** | "Unavailable - ATF TRAINING" | MORSS, Manager, admin, staff |
+| **Visible** | "Unavailable - ATF TRAINING" | Admin, Manager, staff |
 | **Click to reveal** | "Unavailable". Clicking the block offers **Show** | Front Desk |
 | **Hidden** | "Unavailable" only | RSO, Receipt Counter |
 
 Members never see the reason. To hide reasons from ManageMemberships staff as well, turn on **Hide Unavailable Reasons From Staff** in ManageMemberships under Portal Settings > Privacy & Access.
 
-Change who sees what on the [Roles](../user/roles) screen.
+Change who sees what on the [Roles](../user/roles.md) screen.
 
 ---
 

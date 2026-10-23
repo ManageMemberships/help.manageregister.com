@@ -64,7 +64,7 @@ Manager Override Codes require a PIN to be entered before certain POS actions ca
 
 Each manager can have their own PIN. PINs are securely hashed and never displayed after creation.
 
-A PIN only works while its owner's role has the `approve manager override` permission (MORSS, Manager and admin by default). Moving someone to a role without it retires their PIN. After 5 wrong PINs in a minute, PIN entry is paused for that minute.
+A PIN only works while its owner's role has the `approve manager override` permission (Admin and Manager by default). Moving someone to a role without it retires their PIN. After 5 wrong PINs in a minute, PIN entry is paused for that minute.
 
 ### Configuring Protected Actions
 

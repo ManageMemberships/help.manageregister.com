@@ -12,13 +12,13 @@ Every user has one role. The role decides which screens they can open, where the
 
 | Role | Lands on after login | Can open | Sees costs | Override PIN works |
 |------|----------------------|----------|------------|--------------------|
-| **MORSS** | Dashboard | Everything an admin can | Yes | Yes |
+| **Admin** (full access) | Dashboard | Everything, all views | Yes | Yes |
 | **Manager** | Dashboard | Everything except users, roles, payment methods and app settings | Yes | Yes |
 | **Front Desk** | Register Member | POS, front desk screens, range calendar (can move bookings) | No | No |
 | **Receipt Counter** | Pending Pickup | Pending pickup queue; sales, members and products (read-only) | No | No |
 | **RSO** | Range calendar | Range calendar (view only) | No | No |
 
-The original **admin** and **staff** roles still exist and can open every screen they could before.
+**Admin** is the full-access role (what the contract calls "MORSS" / All Access): every screen, product costs visible, and its override PIN works. The original **staff** role still exists and can open every screen it could before.
 
 ---
 
@@ -52,12 +52,12 @@ Go to **User > Roles** and edit a role to add or remove permissions. Some useful
 | `view unavailable reasons` | See why time is blocked (e.g. "ATF TRAINING") |
 | `reveal unavailable reasons` | See the reason only after clicking **Show** |
 
-A role with neither of the last two sees blocked time as just "Unavailable". See [Calendar](../resources/calendar#blocked-time-and-privacy).
+A role with neither of the last two sees blocked time as just "Unavailable". See [Calendar](../resources/calendar.md#blocked-time-and-privacy).
 
 ---
 
 ## Tips
 
-- Pair roles with registers: limit each register to the roles that should use it. See [Cash Register](../setting/cash-register).
-- Only roles with `approve manager override` can approve overrides, so give PINs to MORSS and Manager users.
-- Members who still need the range safety briefing are flagged at the POS. See [Safety Briefing](../safety-briefing).
+- Pair roles with registers: limit each register to the roles that should use it. See [Cash Register](../setting/cash-register.md).
+- Only roles with `approve manager override` can approve overrides, so give PINs to Admin and Manager users.
+- Members who still need the range safety briefing are flagged at the POS. See [Safety Briefing](../safety-briefing.md).

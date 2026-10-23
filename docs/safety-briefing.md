@@ -18,7 +18,7 @@ The same warning appears next to their name in the range calendar's member searc
 
 1. Click **Print briefing ticket**.
 2. The register adds them to the safety briefing queue and prints a ticket with a QR code:
-   - on the register's **Star TSP100** printer, if one is set up (see [Cash Register](./setting/cash-register));
+   - on the register's **Star TSP100** printer, if one is set up (see [Cash Register](./setting/cash-register.md));
    - otherwise, a printable ticket opens in a new window.
 3. Hand them the ticket. Printing again gives the same ticket.
 
