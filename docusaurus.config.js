@@ -120,6 +120,9 @@ const config = {
         appId: '30VDBWMO15',
         apiKey: '337f8c85eb4a1fafa270a0d46f6a8062',
         indexName: 'help_manageregister_com_30vdbwmo15_pages',
+        // The crawler's records have no `language` or `docusaurus_tag` fields, and the default
+        // contextual filter requires both, which made every search return nothing.
+        contextualSearch: false,
       },
     }),
 };
