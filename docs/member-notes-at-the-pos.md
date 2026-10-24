@@ -38,7 +38,7 @@ How it behaves:
 - It appears each time the member is picked in the Cashier member field. It also appears each time you pick an additional shooter for the sale, and when you pick a customer on a quote.
 - It cannot be closed without clicking **I Acknowledge**.
 - The acknowledgement is not recorded anywhere.
-- **Quick Add Member** never shows it.
+- Adding a member with **Quick Add Member** does not show it, because a new member has no note yet. After you add a note from **Member > Edit**, picking that member shows the pop-up like any other.
 
 ### The Banner
 

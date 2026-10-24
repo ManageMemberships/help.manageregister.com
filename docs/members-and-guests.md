@@ -61,7 +61,7 @@ After the member is created, the wizard takes them through any agreements they s
 
 ## Registering Without a Plan
 
-If you leave **No plan — sign up only**, the person is created in ManageMemberships as **inactive**. The Cashier blocks sales to them with the **INACTIVE MEMBER - TRANSACTION BLOCKED** pop-up and the reason **Inactive - reason not recorded**. See [Paused and Inactive Members](./paused-and-inactive-members.md).
+If you leave **No plan — sign up only** and no ManageMemberships member with that email exists yet, the person is created in ManageMemberships as **inactive**. The Cashier blocks sales to them with the **INACTIVE MEMBER - TRANSACTION BLOCKED** pop-up and the reason **Inactive - reason not recorded**. See [Paused and Inactive Members](./paused-and-inactive-members.md). If the email already exists, ManageRegister uses that account and the plan you picked is not applied.
 
 To make them active:
 
