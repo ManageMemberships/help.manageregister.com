@@ -54,39 +54,9 @@ Update your personal account settings:
 
 ## Manager Override Codes
 
-Manager Override Codes require a PIN to be entered before certain POS actions can proceed. This prevents unauthorized price changes, discounts, and refunds.
+The **App** tab has a **Manager Override Codes** section where you choose which POS actions, such as discounts and refunds, ask for a manager PIN before they go through.
 
-### Setting Up Override PINs
-
-1. Go to **User > Users** and edit a manager/admin user.
-2. In the **Manager Override** section, enter a 4-6 digit numeric PIN.
-3. Save.
-
-Each manager can have their own PIN. PINs are securely hashed and never displayed after creation.
-
-A PIN only works while its owner's role has the `approve manager override` permission (Admin and Manager by default). Moving someone to a role without it retires their PIN. After 5 wrong PINs in a minute, PIN entry is paused for that minute.
-
-### Configuring Protected Actions
-
-Under **Setting > General Setting > App tab**, find the **Manager Override Codes** section. Check which actions should require a PIN:
-
-| Action | What It Protects |
-|--------|-----------------|
-| **Discounts & Pricing** | Editing unit prices, per-item discounts, line discounts, and transaction-level discounts. |
-| **Refunds** | Issuing a refund from a sale's page. The refund form asks for the manager PIN. |
-
-Nothing is protected until you tick it here. Same-day card refunds are voided automatically as part of the refund.
-
-When a cashier attempts a protected action, a modal appears prompting for a manager PIN. The override is logged with the approver's name, the cashier, the action, and the context.
-
-### Viewing Override Logs
-
-Go to **Setting > Override Logs** to see a history of all manager overrides. This page is only visible to admin users. Each log entry shows:
-
-- Date/time
-- Action type
-- Who approved it
-- Which cashier requested it
+For what each option does, how to set up manager PINs, and how to read the Override Logs, see [Manager Override Codes](./manager-override.md).
 
 ---
 

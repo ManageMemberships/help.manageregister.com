@@ -49,4 +49,4 @@ Click on any sale to view the full details, including:
 ## Tips
 
 - Use the Selling History to reconcile daily sales with your Z-Report.
-- If you need to issue a refund, open the sale and use the **Issue Refund** button at the top.
+- If you need to issue a refund, open the sale and use the **Issue Refund** button at the top. If **Refunds** is ticked under Manager Override Codes, the refund form also asks for a manager PIN. See [Manager Override Codes](./setting/manager-override.md).
