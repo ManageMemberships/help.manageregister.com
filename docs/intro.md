@@ -20,20 +20,20 @@ Accurate settings here ensure your reports and logs reflect the correct time and
 
 Before adding products, it's helpful to create one or more **Categories**. This allows you to group products for better organization and filtering.
 
-- Go to **Inventory > Categories** to add your categories.
+- Go to **Inventory > Category** to add your categories.
 
 ## 3. Add Products
 
 Once categories are set:
 
-- Navigate to **Inventory > Products**.
+- Navigate to **Inventory > Product**.
 - Add each product, assigning it to a category and setting its details (name, price, etc).
 
 ## 4. Document Purchases (Do Not Manually Edit Quantity)
 
 To increase product stock levels, **do not manually edit the quantity field**. Instead:
 
-- Go to **Inventory > Purchases**.
+- Go to **Inventory > Purchasing**.
 - Log each new stock purchase there, selecting the product and entering the quantity and purchase details.
 
 ⚠️ This is important: **Only documenting purchases ensures accurate stock history, cost tracking, and inventory reporting**. Manually changing quantities will result in incorrect inventory levels and broken reports.

@@ -63,6 +63,8 @@ Marking a PO **Approved** or **Received** requires the *approve purchasing* perm
 
 Once a PO is received, its products drop off the Low Stock Report (assuming they're back above par), and its lines no longer count toward the **On Open PO** column.
 
+You can print product labels from a PO before it is received. See [Printing Product Labels](../inventory/printing-product-labels.md#printing-from-a-purchase-order).
+
 ---
 
 ## Sending the PO to Your Supplier

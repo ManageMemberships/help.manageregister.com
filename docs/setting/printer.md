@@ -6,6 +6,8 @@ sidebar_position: 2
 
 The Printer settings page lets you configure a USB receipt printer for use with the POS system. Printing happens directly from your browser, and settings are saved **per browser/computer** — configure the printer on each register station.
 
+This page is for receipt printers only. To print product labels, see [Printing Product Labels](../inventory/printing-product-labels.md).
+
 :::note
 USB printing requires **Chrome or Edge**. (Star LAN/WiFi printers configured under **Registers** with WebPRNT are a separate feature and don't use this page.)
 :::
