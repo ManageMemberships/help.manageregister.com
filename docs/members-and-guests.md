@@ -87,3 +87,4 @@ For a guest who exists only in ManageRegister, use a member note to warn staff. 
 
 - Use **Create Member** or **Quick Add Member** for a one-time customer. Use **Register Member** when the person should become a ManageMemberships member.
 - To warn staff about a guest, see [Member Notes at the POS](./member-notes-at-the-pos.md).
+- A member created with **Create Member** or **Quick Add Member** has no date of birth, so the Cashier shows no age badge. See [Age Badge (Under 18 / Under 21)](./age-badge.md).
