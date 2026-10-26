@@ -101,3 +101,4 @@ The **REASON** comes from ManageMemberships:
 - Read the **REASON** in the inactive popup. It tells you why the member was blocked.
 - If the member has a note, it shows in the popup.
 - The Calendar and Class Booking pages don't warn about paused or inactive members. Watch for the warnings when you add the member in the Cashier.
+- The Cashier also shows an age badge, **UNDER 18** or **UNDER 21**, next to a member's name. It never blocks a sale. See [Age Badge (Under 18 / Under 21)](./age-badge.md).
