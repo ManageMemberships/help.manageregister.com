@@ -24,6 +24,7 @@ Configure your business basics:
 Additional settings found inside the App tab:
 
 - **Currency**: Set the currency used throughout the system.
+- **Firearm Rental Charge Products** and **Rental Alert Time**: These show only while Firearm rental custody is turned on. See [Firearm Rental Custody](../firearm-rental.md#set-it-up).
 
 ---
 
@@ -37,6 +38,16 @@ Additional settings found inside the App tab:
 ## Category Markups
 
 Set default markup percentages at the category level. This allows you to apply consistent pricing rules across product categories.
+
+---
+
+## Feature Tab
+
+The Feature tab has a tick box for each optional part of ManageRegister. Tick a box and save to turn that part on, or untick it and save to turn it off. Only an owner or admin sees this tab.
+
+- **Firearm rental custody**: Keeps track of which rental guns are out and who has them. It is off by default. See [Firearm Rental Custody](../firearm-rental.md).
+
+Click **Save** and confirm when asked.
 
 ---
 
