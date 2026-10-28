@@ -159,6 +159,8 @@ It says how many rental guns are still out, and lists each one with the member, 
 
 ## Who Can Use It
 
+The table shows what the built-in roles can do by default. Admin and Manager can force close by default.
+
 | Role | Check out, take back and view | Force close |
 |------|-------------------------------|-------------|
 | **Admin** | Yes | Yes |
@@ -170,7 +172,7 @@ It says how many rental guns are still out, and lists each one with the member, 
 
 The Cashier needs POS access, which RSO does not have, so an RSO swaps guns on **Receive Rental**.
 
-Roles you created yourself get nothing automatically. To give one access, edit it under **User > Role**. See [Roles & Permissions](./user/roles.md).
+Roles you created yourself get nothing automatically. To give one access, edit it under **User > Role** and add the permissions it needs: `check_out firearm_rental`, `receive firearm_rental` and `read firearm_rental` to check out, take back and view, and `force_close firearm_rental` to force close. See [Roles & Permissions](./user/roles.md).
 
 ---
 

@@ -18,7 +18,7 @@ Every user has one role. The role decides which screens they can open, where the
 | **Receipt Counter** | Pending Pickup | Pending pickup queue; sales, members and products (read-only) | No | No | No |
 | **RSO** | Range calendar | Range calendar (view only), Receive Rental and Out Now (when [Firearm Rental Custody](../firearm-rental.md) is on) | No | No | No |
 
-**Admin** is the full-access role (what the contract calls "MORSS" / All Access): every screen, product costs visible, and its override PIN works. The original **staff** role still exists and can open every screen it could before. It can also use Receive Rental, Out Now and the Cashier's **Scan firearm** box when Firearm rental custody is on, but it can't force close a rental.
+**Admin** is the full-access role (what the contract calls "MORSS" / All Access): every screen, product costs visible, and its override PIN works. The original **staff** role still exists and can open every screen it could before. It can also use Receive Rental, Out Now and the Cashier's **Scan firearm** box when Firearm rental custody is on, but it doesn't force close a rental by default.
 
 ---
 
@@ -66,4 +66,4 @@ A role with neither of the last two sees blocked time as just "Unavailable". See
 - Pair roles with registers: limit each register to the roles that should use it. See [Cash Register](../setting/cash-register.md).
 - Only roles with `approve manager override` can approve overrides, so give PINs to Admin and Manager users. Only roles with `manage manager_override` can set those PINs. See [Manager Override Codes](../setting/manager-override.md).
 - Members who still need the range safety briefing are flagged at the POS. See [Safety Briefing](../safety-briefing.md).
-- Receipt Counter has no rental gun access, and only Admin and Manager can force close a rental. See [Firearm Rental Custody](../firearm-rental.md#who-can-use-it).
+- Receipt Counter has no rental gun access. Admin and Manager can force close a rental by default; other roles need the `force_close firearm_rental` permission. See [Firearm Rental Custody](../firearm-rental.md#who-can-use-it).
