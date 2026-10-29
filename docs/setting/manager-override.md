@@ -121,6 +121,8 @@ Go to **Setting > Override Logs** to see every approved override, newest first. 
 
 Only approved overrides are logged. A wrong PIN does not add a row.
 
+Force closing a rental gun on **Out Now** is logged here too. Its **Action** reads **Force close rental**, **Approved By** and **Cashier** show the person who closed it, **Detail** reads "Rental force close", and **Sale #** shows the sale if the gun was tied to one. See [Firearm Rental Custody](../firearm-rental.md#force-close-a-rental).
+
 ---
 
 ## Tips
