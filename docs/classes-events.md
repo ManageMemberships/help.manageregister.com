@@ -29,3 +29,11 @@ The Classes & Events page lets you book classes and events for members directly 
 
 - Make sure the class or event is set up and active on ManageMemberships before trying to book it here.
 - If a class doesn't appear, verify it hasn't reached capacity or been deactivated.
+
+---
+
+## Checking In for a Class
+
+Check people in for today's classes from [Account Check](./account-check.md#for-a-class). A class they've booked or bought is picked for them, and checking in marks that booking attended.
+
+A class has to be paid for before they can be checked in. If they haven't booked, **Collect payment** in Account Check books their seat and puts it in the cart.

@@ -14,7 +14,7 @@ When you select a member who still needs the briefing, the POS shows:
 
 **⚠ NEEDS SAFETY BRIEFING** · **Print briefing ticket**
 
-The same warning appears next to their name in the range calendar's member search.
+The same warning appears next to their name in the range calendar's member search, and in [Account Check](./account-check.md), which has its own **Print briefing ticket** link. On the **Checked In** list, anyone who still owes the briefing has a **Print briefing ticket** button too.
 
 1. Click **Print briefing ticket**.
 2. The register adds them to the safety briefing queue and prints a ticket with a QR code:
@@ -26,7 +26,7 @@ The same warning appears next to their name in the range calendar's member searc
 
 ## After the Briefing
 
-The employee running the briefing unlocks the briefing kiosk with their own code. Each attendee scans their ticket on the way out. That marks the briefing complete in ManageMemberships, and the warning disappears from the register once the member is synced again.
+The employee running the briefing unlocks the briefing kiosk with their own code. Each attendee scans their ticket on the way out. That marks the briefing complete in ManageMemberships and puts them on the RSO's Firing Line board. If the ticket was printed for someone in a party on the **Checked In** list, they join the board with their party. The register picks up the finished briefing the next time you open the **Checked In** list, or the next time you search for the member.
 
 Setting up the kiosk and employee codes is done in ManageMemberships. See the ManageMemberships help: **Safety Briefing**.
 
