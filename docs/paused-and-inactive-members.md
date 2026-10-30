@@ -4,7 +4,7 @@ sidebar_position: 7.5
 
 # Paused and Inactive Members
 
-The Cashier warns you when a member's membership is paused or inactive. A paused member shows a notice, and the sale can still go through. An inactive member blocks the sale until they are reactivated.
+The Cashier warns you when a member's membership is paused or inactive. A paused member shows a notice, and the sale can still go through. An inactive member blocks the sale until they are reactivated. The exception is a member whose **membership payment failed**: you can collect what they owe right at the register, or, if your gym chooses, sell to them as a guest. See [Members Whose Payment Failed](#members-whose-payment-failed).
 
 ---
 
@@ -86,12 +86,59 @@ The **REASON** comes from ManageMemberships:
 
 ---
 
+## Members Whose Payment Failed
+
+When the **REASON** is **Payment failed** and ManageMemberships says how much the member owes, you don't have to send them away. What happens depends on your gym's setting for [members who owe](./setting/general-setting.md#members-who-owe-on-their-membership).
+
+### Collecting What They Owe (Default)
+
+Instead of the blocked popup, you see a popup with the heading **MEMBERSHIP PAYMENT OVERDUE**:
+
+- "&lt;name&gt;'s membership payment failed and **$149.00** is overdue (2 invoices). Collect it now to reactivate the membership and continue this sale."
+- The **REASON** and **MEMBER NOTE**, as for any inactive member.
+- A green **Add $149.00 overdue balance to cart** button.
+
+Click the button. A line called **Overdue membership balance — &lt;name&gt;** goes into the cart at the amount ManageMemberships shows right now. If that amount has changed since the member was looked up, a notice tells you the new amount, and the cart uses it.
+
+- The overdue line is the exact amount owed. It can't be discounted or changed. You can remove it.
+- It has to be paid in this sale. It can't go on a layaway, an invoice or a quote.
+- Once it's in the cart the popup closes and the rest of the sale goes through as normal. Paying the sale records the payment in ManageMemberships, which brings the member current.
+
+If the balance can't be collected at the register, the popup says why, for example when ManageMemberships shows nothing owed. Search for the member again to refresh their status.
+
+A member who is inactive for any other reason, or whose payment failed but ManageMemberships didn't say how much they owe, still gets the **INACTIVE MEMBER - TRANSACTION BLOCKED** popup.
+
+### Selling to Them as a Guest (Optional)
+
+Your gym can choose to sell to members who owe as if they were **non-members**, instead of making them pay first. Turn this on in [General Setting](./setting/general-setting.md#members-who-owe-on-their-membership).
+
+With it on:
+
+1. There's no popup. The sale isn't blocked.
+2. An amber notice appears at the top of the cart panel:
+   - Heading: **MEMBERSHIP PAST DUE — $25.00**
+   - "&lt;name&gt; is charged as a guest — no member pricing until the overdue balance is paid."
+   - A **Collect overdue balance instead** button.
+3. They pay **guest prices**:
+   - Member-exempt products, such as range fees or targets, are charged at full price instead of free.
+   - Category member discounts, for example on ammo, don't apply.
+   - They can still buy, shoot and do transfers.
+4. If they decide to pay what they owe, click **Collect overdue balance instead**. The overdue balance goes into the cart, and they get member pricing again for the rest of this sale.
+
+Only members whose **payment failed** are sold to as guests. Members inactive for any other reason, such as a canceled membership or staff deactivation, are still blocked.
+
+Account Check shows the same status. See [Account Check](./account-check.md).
+
+---
+
 ## At a Glance
 
 | Status | What staff see | Can the sale go through? |
 |--------|----------------|--------------------------|
 | **Paused** | Tag in the member search and a notice at the top of the cart panel | Yes. The notice is information only |
 | **Inactive** | **⚠ USER IS INACTIVE** and the **INACTIVE MEMBER - TRANSACTION BLOCKED** popup | No. The popup blocks the sale until the member is reactivated in ManageMemberships |
+| **Payment failed, owes money** (default) | The **MEMBERSHIP PAYMENT OVERDUE** popup with **Add $X overdue balance to cart** | Yes, once the overdue balance is in the cart and paid in this sale |
+| **Payment failed, owes money** (sold as a guest) | An amber **MEMBERSHIP PAST DUE** notice with **Collect overdue balance instead** | Yes, at guest prices. Collecting the balance gives member pricing back |
 
 ---
 

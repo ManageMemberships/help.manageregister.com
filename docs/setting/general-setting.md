@@ -26,6 +26,19 @@ Additional settings found inside the App tab:
 - **Currency**: Set the currency used throughout the system.
 - **Firearm Rental Charge Products** and **Rental Alert Time**: These show only while Firearm rental custody is turned on. See [Firearm Rental Custody](../firearm-rental.md#set-it-up).
 
+### Members Who Owe on Their Membership
+
+In the **Range & Booking Settings** section of the App tab, next to **Member-Exempt Products**. It decides what the Cashier does with a member whose **membership payment failed** and who owes a balance:
+
+- **Block the sale until the overdue balance is paid** (default): the Cashier shows the **MEMBERSHIP PAYMENT OVERDUE** popup. Nothing can be sold to them until the balance is in the cart.
+- **Sell to them as a guest (no member pricing) until it is paid**: they can buy, shoot and do transfers at non-member prices. Member-exempt products are charged and member discounts don't apply. The Cashier and Account Check show a past-due notice with a button to collect the balance, and paying it gives them member pricing again for that sale.
+
+Members inactive for any other reason are always blocked. Only the owner can change this setting.
+
+How many failed payments it takes before a member goes inactive is set in ManageMemberships, under Portal Settings.
+
+See [Paused and Inactive Members](../paused-and-inactive-members.md#members-whose-payment-failed) for what staff see in each case.
+
 ---
 
 ## Tax & Financial Settings

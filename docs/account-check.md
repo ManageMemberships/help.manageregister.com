@@ -18,7 +18,18 @@ Both buttons sit under the products on the **Cashier** page. They show when your
    - **Waivers**: each one ✓ signed or ✗ not signed. **Sign Now** lets them sign on the spot.
    - **ID** and **citizenship**, with the **Verify ID** and **Verify citizenship** buttons.
    - Warnings: **⚠ ID NOT CHECKED** (your gym requires an ID check and nobody has checked theirs), **⚠ NEEDS SAFETY BRIEFING** with a **Print briefing ticket** link next to it, and **USER IS INACTIVE**. The **UNDER 18** / **UNDER 21** badge shows next to their name. See [Age Badge](./age-badge.md) and [Safety Briefing](./safety-briefing.md).
+   - For a member whose membership payment failed, at a gym that [sells to them as a guest](./paused-and-inactive-members.md#selling-to-them-as-a-guest-optional): **⚠ MEMBERSHIP PAST DUE: charged as a guest until paid** in amber, instead of USER IS INACTIVE.
 4. Click **Look up someone else** to start over.
+
+### Collecting an Overdue Membership Balance
+
+When a member's membership payment failed and ManageMemberships says how much they owe, a green **Collect $25.00 overdue** button shows under their warnings. It works whether or not your gym sells to them as a guest.
+
+Click it. Account Check closes, the member is put on the sale, and the overdue balance goes into the cart at the amount ManageMemberships shows right now. Take the payment as normal. Paying it brings them current in ManageMemberships.
+
+If the balance can't be collected at the register, for example when ManageMemberships shows nothing owed, Account Check stays open and a message says why.
+
+Members inactive for any other reason don't get the button. See [Paused and Inactive Members](./paused-and-inactive-members.md).
 
 Owners and managers, and any role that can change members, get the verify buttons and the override buttons below.
 
@@ -33,7 +44,7 @@ Pick what they're here for under **Check in for**, then click **Check in**. When
 Pick **Range: shooting today**.
 
 - **Party name** (optional): type the same name, e.g. *Reyes*, for everyone shooting together. Parties show together on the Checked In list with how many lanes they need, and go onto the RSO's board as one party.
-- **Needs to pay for a lane**: checked for guests. It starts unchecked for members, whose lane is part of their membership.
+- **Needs to pay for a lane**: checked for guests. It starts unchecked for members, whose lane is part of their membership. At a gym that [sells to members who owe as guests](./paused-and-inactive-members.md#selling-to-them-as-a-guest-optional), it also starts checked for a member whose membership payment failed. You can always change it.
 - **Under 18**: pick **Parent or legal guardian is here** or **Guardianship form received (paper or emailed)**. They can't be checked in until you do.
 - **No birth date on file**: pick **18 or older (checked their ID)**, or how a minor is covered.
 

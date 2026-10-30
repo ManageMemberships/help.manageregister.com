@@ -24,6 +24,12 @@ Users whose role lacks `manage range bookings` (such as RSO) can view the calend
 
 ---
 
+## Keeping Up to Date
+
+While the Calendar is open, it refreshes itself every 30 seconds. Changes you make here, such as new, moved or deleted bookings and blocked time, show straight away. A booking made in ManageMemberships, for example by a member online, can take up to about a minute to appear.
+
+---
+
 ## Blocked Time and Privacy
 
 To block a resource, select a time range and click **Mark Resource Unavailable**, then enter a reason (e.g. "ATF TRAINING"). To remove a block, click it and confirm.
