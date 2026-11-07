@@ -50,7 +50,7 @@ Each rental gun is a product.
 1. Go to **Inventory > Product** and edit the gun, or add it as a new product.
 2. Tick **Rental firearm**.
 3. Fill in **Serial Number**.
-4. If this gun needs cleaning more or less often than your store default, fill in **Clean every (days)** and **Clean every (rentals)** under **Rental firearm**. Leave them blank to use the store default.
+4. If this gun needs cleaning more or less often than your store default, fill in only the **Clean every** field that differs under **Rental firearm**. Leave the other field blank to use the store default.
 5. Save.
 
 The **Rental firearm** box only shows while Firearm rental custody is on. You can't untick it while that gun is out.
@@ -165,7 +165,7 @@ It works only while Firearm rental custody is on. It covers rental guns, the pro
 
 ### Cleaning Schedule
 
-Each rental gun can be cleaned every so many days, every so many rentals, or both. Whichever comes first makes the gun due. A limit you leave blank does not apply. A gun with no limits shows **No schedule**.
+Each rental gun can be cleaned every so many days, every so many rentals, or both. Whichever comes first makes the gun due. A **Clean every** field you leave blank on a gun uses the store default. If a limit is blank on the gun and in the store default, it does not apply. A gun with no limits shows **No schedule**.
 
 A gun is due when it reaches a limit. If the limit is 5 rentals, the gun is due at the 5th rental since its last cleaning. Days are whole calendar days in your store's time zone.
 
@@ -176,7 +176,7 @@ A gun is due when it reaches a limit. If the limit is 5 rentals, the gun is due 
 
 Rentals since the last cleaning are counted from the rental history. These count:
 
-- guns taken back normally
+- guns scanned back in on **Receive Rental**
 - rentals that were force closed
 - guns that were swapped
 - guns that are still out, except a gun sitting in an unpaid cart
