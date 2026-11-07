@@ -10,6 +10,8 @@ One rental charge covers any number of guns, so swapping one gun for another cos
 
 It is off by default. An owner or admin turns it on, and the owner then sets it up. See [Turn It On](#turn-it-on) and [Set It Up](#set-it-up).
 
+It can also keep track of when each rental gun was last cleaned and warn you when one is due. See [Keep Rental Guns Clean](#keep-rental-guns-clean).
+
 ---
 
 ## Turn It On
@@ -24,10 +26,14 @@ Only an owner or admin sees the **Feature** tab. Reload the page, and **Receive 
 
 ## Set It Up
 
-Once the feature is on, the **App** tab in **Setting > General Setting** has two more settings:
+Once the feature is on, the **App** tab in **Setting > General Setting** has four more settings:
 
 - **Firearm Rental Charge Products**: Pick the product you charge for a rental. A sale with this product in the cart shows the **Scan firearm** box in the Cashier. You can pick more than one product. Your rental guns do not appear in this list.
-- **Rental Alert Time**: When ManageRegister warns you about guns that are still out at the end of the day. It starts at 9:00 PM. See [End-of-Day Alert](#end-of-day-alert).
+- **Rental Alert Time**: When ManageRegister warns you about guns that are still out at the end of the day, and about guns that are due for cleaning. It starts at 9:00 PM. See [End-of-Day Alert](#end-of-day-alert) and [Cleaning Reminders](#cleaning-reminders).
+- **Clean Rental Guns Every (days)**: How many days a rental gun can go between cleanings.
+- **Clean Rental Guns Every (rentals)**: How many rentals a rental gun can have between cleanings.
+
+The two **Clean Rental Guns Every** settings are your store defaults for every rental gun. Leave one blank and it does not apply. See [Cleaning Schedule](#cleaning-schedule).
 
 Click **Save** and confirm when asked.
 
@@ -44,9 +50,12 @@ Each rental gun is a product.
 1. Go to **Inventory > Product** and edit the gun, or add it as a new product.
 2. Tick **Rental firearm**.
 3. Fill in **Serial Number**.
-4. Save.
+4. If this gun needs cleaning more or less often than your store default, fill in **Clean every (days)** and **Clean every (rentals)** under **Rental firearm**. Leave them blank to use the store default.
+5. Save.
 
 The **Rental firearm** box only shows while Firearm rental custody is on. You can't untick it while that gun is out.
+
+Use a lower number for a gun that runs dirty and needs cleaning more often. See [Cleaning Schedule](#cleaning-schedule).
 
 A gun marked **Rental firearm** can't be added to a cart or sold. If someone tries, ManageRegister shows "Rental firearms can't be added to the cart". Don't tick the box on a gun you sell.
 
@@ -99,6 +108,8 @@ Go to **Fulfillment > Receive Rental**.
 1. Scan the returned gun's serial number, barcode or SKU, where it says "Scan the gun being returned".
 2. ManageRegister shows "Received &lt;serial&gt; from &lt;member&gt;."
 
+If the gun is due for cleaning, you also see a note that says **Send it to be cleaned**. It is only a reminder, with nothing to click. See [Cleaning Reminders](#cleaning-reminders).
+
 A gun that isn't out shows "Not checked out." and nothing changes.
 
 ### Swap for Another Gun
@@ -132,6 +143,8 @@ A small tag on a row tells you about its sale:
 | **no sale linked** | The gun isn't tied to a sale, for example because the shooter was taken off the sale after the scan. |
 | No tag | The gun is tied to a paid sale. |
 
+A gun that is due for cleaning also shows a **Due for cleaning** badge. See [Cleaning Reminders](#cleaning-reminders).
+
 ### Force Close a Rental
 
 Managers and admins can close a rental without scanning the gun back in. Use it when a gun can't be scanned back in, for example because its tag is wrong.
@@ -141,6 +154,75 @@ Managers and admins can close a rental without scanning the gun back in. Use it 
 3. Click **Force close** to confirm.
 
 The row leaves the list. The force close is recorded in **Setting > Override Logs** as **Force close rental**. See [Manager Override Codes](./setting/manager-override.md#override-logs).
+
+---
+
+## Keep Rental Guns Clean
+
+Firearm Maintenance keeps track of when each rental gun was last cleaned and tells you when it is due again. It only warns. It never blocks a rental.
+
+It works only while Firearm rental custody is on. It covers rental guns, the products ticked as **Rental firearm**. It does not cover guns you sell.
+
+### Cleaning Schedule
+
+Each rental gun can be cleaned every so many days, every so many rentals, or both. Whichever comes first makes the gun due. A limit you leave blank does not apply. A gun with no limits shows **No schedule**.
+
+A gun is due when it reaches a limit. If the limit is 5 rentals, the gun is due at the 5th rental since its last cleaning. Days are whole calendar days in your store's time zone.
+
+- **Store default**: **Clean Rental Guns Every (days)** and **Clean Rental Guns Every (rentals)** on the **App** tab. Only the owner can change them. See [Set It Up](#set-it-up).
+- **One gun**: **Clean every (days)** and **Clean every (rentals)** on the gun's product. Blank means the gun uses the store default. See [Set Up Your Rental Guns](#set-up-your-rental-guns).
+
+### What Counts as a Rental
+
+Rentals since the last cleaning are counted from the rental history. These count:
+
+- guns taken back normally
+- rentals that were force closed
+- guns that were swapped
+- guns that are still out, except a gun sitting in an unpaid cart
+
+A gun scanned into a cart that was cleared before the sale does not count.
+
+A gun in an unpaid cart shows as out, but it does not count toward cleaning until the sale is paid. If the cart is cleared first, it never counts.
+
+### See What Needs Cleaning
+
+Go to **Fulfillment > Firearm Maintenance**. It has one row for each rental gun, and guns that are due are listed first.
+
+Each row shows:
+
+- a status badge
+- the date the gun was last cleaned, and who cleaned it
+- its days and rentals, compared with its limits
+- whether the gun is out
+
+| Badge | What it means |
+|-------|---------------|
+| **OK** | The gun is not due for cleaning. |
+| **Due** | The gun is due for cleaning. |
+| **Never cleaned** | The gun has never been cleaned. It counts as due once it has a limit. |
+| **No schedule** | The gun has no limits, so it is never due. |
+
+### Mark a Gun Cleaned
+
+1. Go to **Fulfillment > Firearm Maintenance**.
+2. Click **Mark cleaned** on the gun's row.
+3. Add a note if you want to. It is optional.
+4. Click **Save cleaning**.
+
+ManageRegister saves who cleaned the gun and when, and starts both counts again from zero.
+
+To see every time a gun was cleaned, click **History** on its row. A popup lists that gun's cleanings, newest first.
+
+While a gun is out, the button is greyed out and reads **Out on rental**. Take the gun back on **Receive Rental** first.
+
+### Cleaning Reminders
+
+ManageRegister reminds you in three places. None of them blocks a rental.
+
+- **Bell notification**: Owners, admins, managers and anyone who can clean rental guns get a notification listing the guns that are due. It arrives during the same hour as the **Rental Alert Time**, in your store's time zone. Only the hour counts, so 9:30 PM sends at 9:00 PM. It is sent at most once a day, and it repeats each day until the guns are cleaned. Nothing is sent when no gun is due.
+- **Cashier**: When you scan a gun that is due into the **Scan firearm** box, an amber warning appears. The rental still goes through.
+- **Out Now and Receive Rental**: **Out Now** shows a **Due for cleaning** badge on guns that are due. After you take back a gun that is due, **Receive Rental** shows a note that says **Send it to be cleaned**. It is only a reminder, with nothing to click.
 
 ---
 
@@ -155,24 +237,28 @@ It says how many rental guns are still out, and lists each one with the member, 
 - The time is in your store's time zone, which is the **Timezone** on the owner's profile. See [General Setting](./setting/general-setting.md#profile).
 - A gun in an unpaid cart counts as out.
 
+Guns that are due for cleaning get their own notification. See [Cleaning Reminders](#cleaning-reminders).
+
 ---
 
 ## Who Can Use It
 
 The table shows what the built-in roles can do by default. Admin and Manager can force close by default.
 
-| Role | Check out, take back and view | Force close |
-|------|-------------------------------|-------------|
-| **Admin** | Yes | Yes |
-| **Manager** | Yes | Yes |
-| **staff** | Yes | No |
-| **Front Desk** | Yes | No |
-| **RSO** | Yes | No |
-| **Receipt Counter** | No | No |
+| Role | Check out, take back and view | Force close | Clean guns |
+|------|-------------------------------|-------------|------------|
+| **Admin** | Yes | Yes | Yes |
+| **Manager** | Yes | Yes | Yes |
+| **staff** | Yes | No | Yes |
+| **Front Desk** | Yes | No | Yes |
+| **RSO** | Yes | No | Yes |
+| **Receipt Counter** | No | No | No |
+
+**Clean guns** means opening **Firearm Maintenance** and marking guns cleaned.
 
 The Cashier needs POS access, which RSO does not have, so an RSO swaps guns on **Receive Rental**.
 
-Roles you created yourself get nothing automatically. To give one access, edit it under **User > Role** and add the permissions it needs: `check_out firearm_rental`, `receive firearm_rental` and `read firearm_rental` to check out, take back and view, and `force_close firearm_rental` to force close. See [Roles & Permissions](./user/roles.md).
+Roles you created yourself get nothing automatically. To give one access, edit it under **User > Role** and add the permissions it needs: `check_out firearm_rental`, `receive firearm_rental` and `read firearm_rental` to check out, take back and view, `force_close firearm_rental` to force close, and `clean firearm_rental` to open Firearm Maintenance and mark guns cleaned. See [Roles & Permissions](./user/roles.md).
 
 ---
 
@@ -191,3 +277,4 @@ When it is off, **Receive Rental**, **Out Now** and the **Scan firearm** box dis
 - Put the serial number on every rental gun's product. Staff scan it to hand the gun out and again to take it back.
 - If a scan says more than one product matches, scan the serial number instead.
 - Check **Out Now** before you close for the day. It is the quickest way to see what hasn't come back.
+- Give a gun that runs dirty its own **Clean every** limits on its product, rather than lowering the store default for every gun.
