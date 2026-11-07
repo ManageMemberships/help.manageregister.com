@@ -24,7 +24,7 @@ Configure your business basics:
 Additional settings found inside the App tab:
 
 - **Currency**: Set the currency used throughout the system.
-- **Firearm Rental Charge Products** and **Rental Alert Time**: These show only while Firearm rental custody is turned on. See [Firearm Rental Custody](../firearm-rental.md#set-it-up).
+- **Firearm Rental Charge Products**, **Rental Alert Time**, **Clean Rental Guns Every (days)** and **Clean Rental Guns Every (rentals)**: These show only while Firearm rental custody is turned on. See [Firearm Rental Custody](../firearm-rental.md#set-it-up).
 
 ### Members Who Owe on Their Membership
 

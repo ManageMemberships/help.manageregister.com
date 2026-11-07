@@ -14,11 +14,11 @@ Every user has one role. The role decides which screens they can open, where the
 |------|----------------------|----------|------------|--------------------|-----------------------|
 | **Admin** (full access) | Dashboard | Everything, all views | Yes | Yes | Yes |
 | **Manager** | Dashboard | Everything except users, roles, payment methods and app settings | Yes | Yes | No |
-| **Front Desk** | Register Member | POS, front desk screens, range calendar (can move bookings), Receive Rental and Out Now (when [Firearm Rental Custody](../firearm-rental.md) is on) | No | No | No |
+| **Front Desk** | Register Member | POS, front desk screens, range calendar (can move bookings), Receive Rental, Out Now and Firearm Maintenance (when [Firearm Rental Custody](../firearm-rental.md) is on) | No | No | No |
 | **Receipt Counter** | Pending Pickup | Pending pickup queue; sales, members and products (read-only) | No | No | No |
-| **RSO** | Range calendar | Range calendar (view only), Receive Rental and Out Now (when [Firearm Rental Custody](../firearm-rental.md) is on) | No | No | No |
+| **RSO** | Range calendar | Range calendar (view only), Receive Rental, Out Now and Firearm Maintenance (when [Firearm Rental Custody](../firearm-rental.md) is on) | No | No | No |
 
-**Admin** is the full-access role (what the contract calls "MORSS" / All Access): every screen, product costs visible, and its override PIN works. The original **staff** role still exists and can open every screen it could before. It can also use Receive Rental, Out Now and the Cashier's **Scan firearm** box when Firearm rental custody is on, but it doesn't force close a rental by default.
+**Admin** is the full-access role (what the contract calls "MORSS" / All Access): every screen, product costs visible, and its override PIN works. The original **staff** role still exists and can open every screen it could before. It can also use Receive Rental, Out Now, Firearm Maintenance and the Cashier's **Scan firearm** box when Firearm rental custody is on, but it doesn't force close a rental by default.
 
 ---
 
@@ -54,6 +54,7 @@ Go to **User > Role** and edit a role to add or remove permissions. Some useful 
 | `receive firearm_rental` | Open Receive Rental and take rental guns back |
 | `read firearm_rental` | Open Out Now |
 | `force_close firearm_rental` | Force close a rental on Out Now. Admin and Manager only by default |
+| `clean firearm_rental` | Open Firearm Maintenance and mark rental guns cleaned. Admin, Manager, staff, Front Desk and RSO by default. Receipt Counter and roles you created yourself don't have it |
 | `view unavailable reasons` | See why time is blocked (e.g. "ATF TRAINING") |
 | `reveal unavailable reasons` | See the reason only after clicking **Show** |
 
@@ -66,4 +67,4 @@ A role with neither of the last two sees blocked time as just "Unavailable". See
 - Pair roles with registers: limit each register to the roles that should use it. See [Cash Register](../setting/cash-register.md).
 - Only roles with `approve manager override` can approve overrides, so give PINs to Admin and Manager users. Only roles with `manage manager_override` can set those PINs. See [Manager Override Codes](../setting/manager-override.md).
 - Members who still need the range safety briefing are flagged at the POS. See [Safety Briefing](../safety-briefing.md).
-- Receipt Counter has no rental gun access. Admin and Manager can force close a rental by default; other roles need the `force_close firearm_rental` permission. See [Firearm Rental Custody](../firearm-rental.md#who-can-use-it).
+- Receipt Counter has no rental gun access. Admin and Manager can force close a rental by default; other roles need the `force_close firearm_rental` permission. Receipt Counter and custom roles can't open Firearm Maintenance unless you add `clean firearm_rental`. See [Firearm Rental Custody](../firearm-rental.md#who-can-use-it).
