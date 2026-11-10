@@ -66,6 +66,8 @@ Today's classes are listed by name and start time, with where this person stands
 - **Not booked:** click **Collect payment**. It books their seat, or says the class is full, and puts the class in the cart with them as the customer, at their member price. Take the payment, then check them in.
 - **Booked but not paid:** collect the payment at the counter before checking them in.
 
+If the member has reached their monthly limit on classes booked in advance, **Collect payment** can be refused. A red **Could not book the class** notification shows with the message "This member has reached their advance registration limit (N per month). A manager or owner can book it." The window stays open, nothing is added to the cart and no booking is made. The notification goes away after a few seconds. A connected ManageMemberships owner or manager can book them past the limit. Any other cashier can't. See [Advance Booking Limit](./classes-events.md#advance-booking-limit).
+
 Someone whose membership makes the class free, or whose membership gives them check-in credits, isn't asked to pay.
 
 Checking them in marks their booking attended in ManageMemberships.
@@ -115,3 +117,4 @@ The list starts fresh each day.
 
 - **Range product:** in [General Setting](./setting/general-setting.md), **App** tab, **Range & Booking Settings**, set **Range Reservation Product**. It's what **Collect payment** on the Checked In list adds to the cart, and what marks someone paid when it's sold.
 - **Waivers, classes and their prices, citizenship and ID requirements, and agency bookings** all come from ManageMemberships. Change them there.
+- **Advance Booking Limit (per month):** set on the membership level in ManageMemberships. See [Advance Booking Limit](./classes-events.md#where-the-limit-is-set).

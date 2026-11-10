@@ -60,6 +60,22 @@ Deleted users can be filtered and recovered using the “Trashed” filter.
 
 ---
 
+### 🔗 Connecting a Manager to ManageMemberships
+
+Some things at the register depend on who the cashier is in ManageMemberships. For example, a connected owner or manager can book a class past a member's [Advance Booking Limit](../classes-events.md#advance-booking-limit). A manager who isn't connected is treated like any other cashier.
+
+Only owners see the connect option.
+
+1. Go to **User > User** and edit the user.
+2. Click **Connect to ManageMemberships**.
+3. The person opens the confirmation email and confirms.
+
+An owner can also do this from ManageMemberships under **Settings → Staff → Connect Register Login** by entering the user's ManageRegister user id.
+
+This works once the ManageMemberships update is live.
+
+---
+
 ### 🔒 Password Security
 
 Passwords are securely encrypted. You can optionally reveal the password field while typing. Confirmation is required when setting or updating a password.
