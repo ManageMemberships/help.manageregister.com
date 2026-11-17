@@ -21,7 +21,7 @@ Inventory Count is a physical inventory counting feature that lets you audit you
 
 ## Creating an Inventory Count
 
-Go to **Inventory > Inventory Count** and click **Create**.
+Go to **Inventory > Stock Inventory** and click **Create**.
 
 - **Number**: Auto-generated with the prefix "SO" followed by the date and a sequence number (e.g., `SO-20250505000001`).
 - **PIC (Person In Charge)**: Automatically set to the logged-in user.
@@ -33,18 +33,36 @@ After creating the count, you can begin adding items.
 
 ## Adding Items
 
-There are two ways to add products to an Inventory Count:
+To add products, go to **Inventory > Stock Inventory** and open the count. You can scan items in the **Scan barcode** box, scan straight onto the count page, or pick products by hand.
 
-### Barcode Scanner
+### Scan Barcode Box
 
-From the **View** page of a count, you can scan product barcodes directly. The system listens for barcode input and:
+Click **New stock opname item**. The popup opens with the cursor already in the **Scan barcode** box.
 
-- If the product is **not yet in the count**, it adds it with an actual stock of 1.
-- If the product is **already in the count**, it increments the actual stock by 1.
+1. Scan a product, or type its barcode and press **Enter**.
+2. If the product is already on the count, its actual stock goes up by 1. If it isn't, a new line is added with an actual stock of 1.
+3. A message such as "Cleaning Kit — actual stock 3" confirms the scan.
+4. The box clears and the popup stays open, so you can scan the next item straight away.
+
+Scanners that send **Enter** right after the code work fine. The **Scan barcode** box only appears when you add an item, not when you edit one.
+
+### Scanning on the Count Page
+
+You can also scan on the count's page with no popup open. Each scan adds 1 to that product's actual stock, or adds the product with an actual stock of 1.
+
+- Keys typed inside a popup or an input box are not treated as scans.
+- If no product matches the code, you'll see "Product not found:" followed by the code.
+
+### When a Code Matches More Than One Product
+
+- If the code is one product's barcode and another product's SKU, the barcode match wins.
+- If two products use the same code, the scan is refused with a message like "More than one product uses 12345 (Cleaning Kit, Cleaning Kit XL). Pick the product in the Product box instead." Add that item by hand and choose the right product in the **Product** box.
 
 ### Manual Entry
 
-You can also add products manually by searching for them by name, barcode, or SKU.
+In the **New stock opname item** popup, search for a product in the **Product** box by name, barcode, or SKU, then enter the actual stock. Pressing **Enter** in the **Actual stock** box, or in the popup's other text boxes, does **Create & create another**, so the popup stays open for the next item. This doesn't apply to the **Product** or **Scan barcode** boxes.
+
+Each product can only be on a count once. If you add a product that's already there, you'll see a message like "Cleaning Kit is already on this count (actual stock 3). Edit that line instead." Close the popup and edit that product's line in the count.
 
 For each item, you will see:
 
@@ -83,7 +101,13 @@ Each Inventory Count goes through the following statuses:
 | **Reviewing** | Counting is in progress or under review before final approval. |
 | **Approved** | The count has been finalized and stock levels have been adjusted. |
 
-Once a count is **approved**, it is locked — items can no longer be edited or added.
+A count can only be approved when each product appears on it once.
+
+Once a count is **approved**, it is locked:
+
+- Its status can no longer be changed.
+- Items can no longer be added, edited, or scanned in. Scanning shows "This inventory count has been approved".
+- It can no longer be deleted.
 
 ---
 
@@ -100,7 +124,7 @@ These adjustments happen for every item in the count and are reflected immediate
 
 ## Deleting an Inventory Count
 
-If an Inventory Count is deleted, the system **reverses all stock adjustments** that were made when it was approved, restoring product stock to its prior levels.
+You can delete an Inventory Count only before it is approved. Once a count is approved, **Delete** is no longer available.
 
 Only the Person In Charge (the user who created the count) can delete it.
 
@@ -127,7 +151,7 @@ Inventory Count is a toggleable feature. To enable or disable it, go to **Settin
 ## Tips
 
 - Perform inventory counts regularly to keep your inventory accurate.
-- Use the barcode scanner for faster counting during physical audits.
+- Use the barcode scanner for faster counting during physical audits. Keep the **New stock opname item** popup open and scan item after item.
 - Always attach photos or documentation for significant discrepancies.
 - Review the missing stock calculations before approving to catch any data entry errors.
 - Only users with the **Approve** permission can finalize a count, providing a layer of oversight.
